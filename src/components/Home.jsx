@@ -15,7 +15,7 @@ const Home = () => {
             I'm a Web Developer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            Hello and welcome to my profile website!
+            Hello and welcome to my profile website!!!!
             <br />
             I'm excited to introduce myself as a fresh graduate with a strong
             passion for web development. My aim is to secure a web development
