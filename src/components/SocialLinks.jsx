@@ -44,7 +44,7 @@ const SocialLinks = () => {
           <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/NGTszTat(Echo)_Resume.pdf",
+      href: "/ngtsztat_resume.pdf",
       style: "rounded-br-md",
       download: true,
     },
