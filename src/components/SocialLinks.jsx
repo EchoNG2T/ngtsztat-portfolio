@@ -44,7 +44,7 @@ const SocialLinks = () => {
           <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: `${process.env.PUBLIC_URL}/NGtsztat(Echo)_resume.pdf`,
+      href: `${process.env.PUBLIC_URL}/TSZ_TAT_NG_CV.pdf`,
       style: "rounded-br-md",
       download: true,
     },
