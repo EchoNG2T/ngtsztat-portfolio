@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_4dqkkwx", "template_u5yucs2", form.current, {
+        publicKey: "OdjqyabxSOnN70kTW",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <div
       name="contact"
@@ -16,8 +36,8 @@ const Contact = () => {
 
         <div className="flex justify-center items-center">
           <form
-            action="https://getform.io/f/419c386e-3a84-45ed-b353-793e5c1353be"
-            method="POST"
+            ref={form}
+            onSubmit={sendEmail}
             className="flex flex-col w-full md:w-1/2"
           >
             <input
@@ -39,9 +59,11 @@ const Contact = () => {
               placeholder="Please enter your message here"
             ></textarea>
 
-            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
-              Message me :)
-            </button>
+            <input
+              type="submit"
+              value="Message me :)"
+              className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+            />
           </form>
         </div>
       </div>
